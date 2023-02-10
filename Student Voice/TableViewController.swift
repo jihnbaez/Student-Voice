@@ -9,7 +9,26 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var list = [listOfSuggestions(title: "School Events", suggestions: [Suggestion(name: "new food", description: "We need more good food", upvotes: 7)])]
+    var list:[listOfSuggestions] = [listOfSuggestions(title: "School Events", suggestions: [
+                Suggestion(name: "new food", description: "We need more good food", upvotes:7)]),
+                                    
+                                    
+    listOfSuggestions(title: "Teachers", suggestions: [Suggestion(name: "Extended Help", description: "lengthen office hours", upvotes: 16)]),
+    
+    listOfSuggestions(title: "Academics", suggestions: [Suggestion(name: "Tutoring", description: "Allow students to professionally tutor (include hours)", upvotes: 21)])
+                                    
+    
+    
+    
+    ]
+                                                     
+                                                     
+                             
+                              
+
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,23 +44,27 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return list.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return list[section].suggestions.count
     }
 
-    /*
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "\(list[section].title)"
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "suggest", for: indexPath)
+        let category = list[indexPath.section]
+        let suggestion = category.suggestions[indexPath.row]
         // Configure the cell...
-
+        cell.textLabel?.text = "\(suggestion.name)"
+        cell.detailTextLabel?.text = "\(suggestion.description)"
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
