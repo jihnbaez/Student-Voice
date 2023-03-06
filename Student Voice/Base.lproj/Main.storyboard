@@ -201,7 +201,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBi-Bd-ZJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="-808"/>
+            <point key="canvasLocation" x="3927" y="749"/>
         </scene>
         <!--Item-->
         <scene sceneID="kct-tn-f2n">
@@ -269,12 +269,12 @@ Student Voice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oWd-3u-8mH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3399.2366412213737" y="-254.22535211267606"/>
+            <point key="canvasLocation" x="3929" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Edit Suggest Table View Controller-->
         <scene sceneID="eBm-v6-Cv8">
             <objects>
-                <viewController id="lg1-Du-i91" sceneMemberID="viewController">
+                <viewController id="lg1-Du-i91" customClass="AddEditSuggestTableViewController" customModule="Student_Voice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1mw-by-oby">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,6 +282,7 @@ Student Voice</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="78d7e3a71e726451fde7c6fcf76b9671" translatesAutoresizingMaskIntoConstraints="NO" id="ciw-9a-0xz">
                                 <rect key="frame" x="-9" y="0.0" width="411" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14838612079999999" green="0.26810073849999999" blue="0.35687464479999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a suggestion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vo-SH-eI3">
                                 <rect key="frame" x="77" y="59" width="232" height="37"/>
@@ -317,6 +318,7 @@ Student Voice</string>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egx-3c-HEP">
                                 <rect key="frame" x="154" y="724" width="78" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14838612079999999" green="0.26810073849999999" blue="0.35687464479999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                 <connections>
@@ -358,7 +360,7 @@ Student Voice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6O4-al-6v8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="-840"/>
+            <point key="canvasLocation" x="4793" y="749"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zQ1-QD-bwz">
@@ -376,7 +378,7 @@ Student Voice</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dER-E6-Mnz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440.4580152671756" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="2523" y="4"/>
         </scene>
         <!--Back-->
         <scene sceneID="JKr-wG-MJq">
@@ -503,7 +505,7 @@ Student Voice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03S-aI-snD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3464.8854961832058" y="-725.35211267605632"/>
+            <point key="canvasLocation" x="4140" y="-904"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="brW-M3-rif">
@@ -525,7 +527,7 @@ Student Voice</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NPD-jP-UqH"/>
+        <segue reference="aZN-lU-CBH"/>
         <segue reference="9LJ-Bh-Z7f"/>
     </inferredMetricsTieBreakers>
     <resources>
