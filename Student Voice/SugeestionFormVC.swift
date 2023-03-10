@@ -9,6 +9,32 @@ import UIKit
 
 class SugeestionFormVC: UITableViewController {
 
+    var list : Suggestion?
+    
+    @IBOutlet var suggestion: UITextView!
+    @IBOutlet var titles: UITextField!
+    @IBOutlet var category: UITextField!
+    
+    
+    init?(coder: NSCoder, list:Suggestion?)
+    {
+        self.list = list
+        super.init(coder:coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.list = nil
+        super.init(coder:coder)
+    }
+    
+    func updateView (){
+        guard let list = list else {
+            return
+        }
+        suggestion.text = list.description
+        titles.text = list.name
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,8 +43,24 @@ class SugeestionFormVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        updateView()
+        
+        
     }
-
+    
+    @IBAction func saveButton(_ sender: Any) {
+        guard
+              let title = titles.text, let suggestion = suggestion.text
+        else {
+            return
+        }
+        
+        list = Suggestion(name: title, description: suggestion, upvotes: 0)
+        performSegue(withIdentifier: "transfer", sender: self)
+        
+    }
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
