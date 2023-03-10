@@ -285,11 +285,6 @@ Student Voice</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="78d7e3a71e726451fde7c6fcf76b9671" translatesAutoresizingMaskIntoConstraints="NO" id="ciw-9a-0xz">
-                                <rect key="frame" x="-9" y="0.0" width="411" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.14838612079999999" green="0.26810073849999999" blue="0.35687464479999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a suggestion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vo-SH-eI3">
                                 <rect key="frame" x="77" y="59" width="232" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -350,6 +345,11 @@ Student Voice</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="78d7e3a71e726451fde7c6fcf76b9671" translatesAutoresizingMaskIntoConstraints="NO" id="ciw-9a-0xz">
+                                <rect key="frame" x="-9" y="0.0" width="411" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14838612079999999" green="0.26810073849999999" blue="0.35687464479999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lmb-SA-M5m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -464,7 +464,7 @@ Student Voice</string>
                         <outlet property="suggestion" destination="mnU-Vp-d96" id="CD4-P1-tFr"/>
                         <outlet property="title" destination="BDf-I4-88Q" id="qGO-1O-UW5"/>
                         <outlet property="titles" destination="BDf-I4-88Q" id="4ev-uL-Wl1"/>
-                        <segue destination="uJ3-p8-dJ4" kind="show" id="bIM-LX-NdY"/>
+                        <segue destination="uJ3-p8-dJ4" kind="show" identifier="transfer" id="bIM-LX-NdY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Kx-gZ-Z9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

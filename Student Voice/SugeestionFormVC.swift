@@ -16,7 +16,7 @@ class SugeestionFormVC: UITableViewController {
     @IBOutlet var category: UITextField!
     
     
-    init?(coder: NSCoder, list:listOfSuggestions?)
+    init?(coder: NSCoder, list:Suggestion?)
     {
         self.list = list
         super.init(coder:coder)
@@ -56,7 +56,10 @@ class SugeestionFormVC: UITableViewController {
         }
         
         list = Suggestion(name: title, description: suggestion, upvotes: 0)
+        performSegue(withIdentifier: "transfer", sender: self)
+        
     }
+    
     
     // MARK: - Table view data source
 
