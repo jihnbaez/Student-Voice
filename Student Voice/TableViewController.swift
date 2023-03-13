@@ -9,37 +9,97 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var list:[listOfSuggestions] = [listOfSuggestions(title: "School Events", suggestions: [
-                Suggestion(name: "new food", description: "We need more good food", upvotes:7)]),
-                                    
-                                    
-    listOfSuggestions(title: "Teachers", suggestions: [Suggestion(name: "Extended Help", description: "lengthen office hours", upvotes: 16)]),
     
-    listOfSuggestions(title: "Academics", suggestions: [Suggestion(name: "Tutoring", description: "Allow students to professionally tutor (include hours)", upvotes: 21)])
-                                    
+    var events:[Suggestion] = [Suggestion(name: "new food", detail: "We need more good food", upvotes:7)]
+    var teachers:[Suggestion] =  [Suggestion(name: "Extended Help", detail: "lengthen office hours", upvotes: 16)]
+    var academics:[Suggestion] = [Suggestion(name: "Tutoring", detail: "Allow students to professionally tutor (include hours)", upvotes: 21)]
+    var list:[listOfSuggestions]!
     
+  override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+ 
+        tableView.reloadData()
+    }
     
-    
-    ]
-                                                     
-                                                     
-                             
-                              
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            list.remove(at: indexPath.row)
+            list[indexPath.section].suggestions.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        
-        
     }
+    
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        guard let source = segue.source as? SugeestionFormVC,
+              let s = source.suggest
+        else {return}
+        
+        let p = source.pickerView.selectedRow(inComponent: 0)
+        print(p)
+        
+        if(p == 0){
+            if let indexPath = tableView.indexPathForSelectedRow {
+                
+                list[0].suggestions.remove(at: indexPath.row)
+                list[0].suggestions.insert(s, at: indexPath.row)
+                tableView.deselectRow(at: indexPath, animated: true)
+                
+                
+            }
+            else{
+                list[0].suggestions.append(s)
+            }
+        }
+        
+        if(p == 1){
+            if let indexPath = tableView.indexPathForSelectedRow {
+                
+                list[1].suggestions.remove(at: indexPath.row)
+                list[1].suggestions.insert(s, at: indexPath.row)
+                tableView.deselectRow(at: indexPath, animated: true)
+                
+                
+            }
+            else{
+                list[1].suggestions.append(s)
+            }
+        }
+        if(p == 2){
+            if let indexPath = tableView.indexPathForSelectedRow {
+                
+                list[2].suggestions.remove(at: indexPath.row)
+                list[2].suggestions.insert(s, at: indexPath.row)
+                tableView.deselectRow(at: indexPath, animated: true)
+                
+                
+            }
+            else{
+                list[2].suggestions.append(s)
+            }
+        }
+    }
+
+    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> SuggestionViewController? {
+        
+        guard let cell = sender as? UITableViewCell,
+                let indexPath = tableView.indexPath(for: cell) else {
+            return nil
+        }
+        
+        let book = list[indexPath.section].suggestions[indexPath.row]
+        
+        return SuggestionViewController(coder: coder, list: book)
+    }
+                              
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        list = [listOfSuggestions(title: "School Events", suggestions: events),
+       listOfSuggestions(title: "Teachers", suggestions:teachers), listOfSuggestions(title: "Academics", suggestions:academics)]
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+         self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -54,19 +114,29 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return list[section].suggestions.count
+       return list[section].suggestions.count
+        
+        
     }
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "\(list[section].title)"
+   override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+      return "\(list[section].title)"
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "suggest", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "suggest", for: indexPath)
+//        let category = list[indexPath.section]
+//        let suggestion = category.suggestions[indexPath.row]
+//        // Configure the cell...
+//        cell.textLabel?.text = "\(suggestion.name)"
+//        cell.detailTextLabel?.text = "\(suggestion.description)"
+//        return cell
+//
+        let cell = tableView.dequeueReusableCell(withIdentifier: "suggest", for: indexPath) as! STableCellView
         let category = list[indexPath.section]
         let suggestion = category.suggestions[indexPath.row]
-        // Configure the cell...
-        cell.textLabel?.text = "\(suggestion.name)"
-        cell.detailTextLabel?.text = "\(suggestion.description)"
+        
+       cell.update(with: suggestion)
+
         return cell
     }
     

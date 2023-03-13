@@ -8,6 +8,7 @@
 import UIKit
 
 class SuggestionViewController: UIViewController {
+    var suggest : Suggestion?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,41 +16,41 @@ class SuggestionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    var list : Suggestion?
     
-    @IBOutlet var suggestion: UITextView!
     @IBOutlet var titles: UITextField!
-    @IBOutlet var category: UITextField!
-    
+
     
     init?(coder: NSCoder, list:Suggestion?)
     {
-        self.list = list
+        self.suggest = list
         super.init(coder:coder)
     }
     
     required init?(coder: NSCoder) {
-        self.list = nil
+        self.suggest = nil
         super.init(coder:coder)
     }
     
     func updateView (){
-        guard let list = list else {
+        guard let list = suggest else {
             return
         }
-        suggestion.text = list.description
         titles.text = list.name
+        
     }
     
     @IBAction func saveButton(_ sender: Any) {
         guard
-              let title = titles.text, let suggestion = suggestion.text
+              let title = titles.text
         else {
             return
         }
         
-        list = Suggestion(name: title, description: suggestion, upvotes: 0)
-        performSegue(withIdentifier: "transfer", sender: self)
+
+        
+        suggest = Suggestion(name: "test", detail: title, upvotes: 0)
+
+        performSegue(withIdentifier:"transfer", sender: self)
         
     }
     
