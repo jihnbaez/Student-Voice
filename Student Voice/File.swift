@@ -7,11 +7,13 @@
 
 import Foundation
 
-struct Suggestion {
+struct Suggestion:CustomStringConvertible {
     var name: String
-    var description: String
+    var detail: String
     var upvotes: Int
-    
+    var description: String {
+        return "\(detail)"
+    }
     
 }
 
