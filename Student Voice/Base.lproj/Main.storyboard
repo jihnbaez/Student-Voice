@@ -428,6 +428,9 @@ Student Voice</string>
                                 <color key="tintColor" red="0.14813938739999999" green="0.2683282495" blue="0.35687452549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Guidance Talk"/>
+                                <connections>
+                                    <segue destination="11a-Oz-oyR" kind="show" id="vef-R2-NED"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eON-AA-DU5">
                                 <rect key="frame" x="231" y="565" width="122" height="35"/>
@@ -549,7 +552,48 @@ Student Voice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6O4-al-6v8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4790.0763358778622" y="748.59154929577471"/>
+            <point key="canvasLocation" x="4140" y="896"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="ez5-2Y-RXy">
+            <objects>
+                <viewController title="Messages" id="11a-Oz-oyR" customClass="ViewController" customModule="Student_Voice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vE6-aS-vBI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tkt-Z3-dFf">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="9S2-rx-WPX">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9S2-rx-WPX" id="4f2-2G-cn4">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gfK-Nk-X3C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gfK-Nk-X3C" firstAttribute="trailing" secondItem="tkt-Z3-dFf" secondAttribute="trailing" id="3GI-fl-dvT"/>
+                            <constraint firstItem="tkt-Z3-dFf" firstAttribute="leading" secondItem="gfK-Nk-X3C" secondAttribute="leading" id="CRk-ix-cl8"/>
+                            <constraint firstItem="tkt-Z3-dFf" firstAttribute="top" secondItem="gfK-Nk-X3C" secondAttribute="top" id="WJX-n2-Q0p"/>
+                            <constraint firstItem="tkt-Z3-dFf" firstAttribute="bottom" secondItem="gfK-Nk-X3C" secondAttribute="bottom" id="tq7-sN-61e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tYC-KL-npN"/>
+                    <connections>
+                        <outlet property="myTable" destination="tkt-Z3-dFf" id="RTu-P7-fgG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eR7-XT-Sxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5663.3587786259541" y="896.47887323943667"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zQ1-QD-bwz">
