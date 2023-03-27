@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
         
         let vc = ChatViewController()
-        vc.title = "chat"
+        vc.title = "Chat"
         navigationController?.pushViewController(vc, animated: true)
         
     }

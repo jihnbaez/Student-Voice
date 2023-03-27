@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LYX-Al-ja5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b3u-Uf-yHX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -276,7 +276,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBi-Bd-ZJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6945.801526717557" y="761.97183098591552"/>
+            <point key="canvasLocation" x="7872.5190839694651" y="761.97183098591552"/>
         </scene>
         <!--Sugeestion FormVC-->
         <scene sceneID="yGO-ss-mri">
@@ -398,7 +398,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XpP-uG-T3l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="gxW-Lq-iGc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="8932.061068702289" y="648.59154929577471"/>
+            <point key="canvasLocation" x="9858.7786259541972" y="648.59154929577471"/>
         </scene>
         <!--Item-->
         <scene sceneID="kct-tn-f2n">
@@ -429,7 +429,7 @@ Student Voice</string>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Guidance Talk"/>
                                 <connections>
-                                    <segue destination="11a-Oz-oyR" kind="show" id="vef-R2-NED"/>
+                                    <segue destination="b3u-Uf-yHX" kind="show" id="vef-R2-NED"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eON-AA-DU5">
@@ -565,16 +565,6 @@ Student Voice</string>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tkt-Z3-dFf">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="9S2-rx-WPX">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9S2-rx-WPX" id="4f2-2G-cn4">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gfK-Nk-X3C"/>
@@ -588,12 +578,12 @@ Student Voice</string>
                     </view>
                     <navigationItem key="navigationItem" id="tYC-KL-npN"/>
                     <connections>
-                        <outlet property="myTable" destination="tkt-Z3-dFf" id="RTu-P7-fgG"/>
+                        <outlet property="myTable" destination="tkt-Z3-dFf" id="rSw-rw-yVN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR7-XT-Sxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5663.3587786259541" y="896.47887323943667"/>
+            <point key="canvasLocation" x="6590.0763358778622" y="896.47887323943667"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zQ1-QD-bwz">
@@ -772,7 +762,7 @@ Student Voice</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7R-Lk-bLp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8005.3435114503809" y="648.59154929577471"/>
+            <point key="canvasLocation" x="8932.061068702289" y="648.59154929577471"/>
         </scene>
         <!--Emoji Dictionary-->
         <scene sceneID="bNN-BJ-EQq">
@@ -997,7 +987,7 @@ Student Voice</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-Se-EPc">
-                                                    <rect key="frame" x="35.000000000000014" y="15" width="208.66666666666669" height="30"/>
+                                                    <rect key="frame" x="35.000000000000028" y="15" width="208.66666666666666" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dff-9D-86h" userLabel="Click to pick:">
                                                             <rect key="frame" x="0.0" y="0.0" width="37.666666666666664" height="30"/>
@@ -1086,6 +1076,25 @@ Student Voice</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KP-4n-I0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-231" y="762"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Ex-xa-4WL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b3u-Uf-yHX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="NCX-Ps-gbd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V0y-yZ-zWp">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="11a-Oz-oyR" kind="relationship" relationship="rootViewController" id="a7C-aU-PKO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Md0-wF-x1H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5663.3587786259541" y="896.47887323943667"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
