@@ -7,17 +7,22 @@
 
 import Foundation
 
-struct Suggestion:CustomStringConvertible {
+struct Suggestion: Equatable {
     var name: String
     var detail: String
     var upvotes: Int
-    var description: String {
-        return "\(detail)"
+    var category:Int
+    var sectionTitle: String {
+        String(name.uppercased().first ?? "?")
+    }
+    
+    static func ==(lhs: Self, rhs: Self) -> Bool {
+        return lhs.name == rhs.name
     }
     
 }
 
-struct listOfSuggestions {
+struct Sections {
     var title: String
     var suggestions: [Suggestion]
 }

@@ -13,7 +13,7 @@ class STableCellView: UITableViewCell {
     @IBOutlet weak var details: UILabel!
     @IBOutlet weak var title: UILabel!
     var book:Suggestion!
-    
+
     
 var votes = 0
     var currentVote = 0

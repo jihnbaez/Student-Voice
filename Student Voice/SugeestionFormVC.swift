@@ -13,6 +13,7 @@ class SugeestionFormVC: UITableViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var textView: UITextView!
     var suggest : Suggestion?
     
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var titles: UITextField!
     
     init?(coder: NSCoder, list:Suggestion?)
@@ -32,14 +33,25 @@ class SugeestionFormVC: UITableViewController, UIPickerViewDelegate, UIPickerVie
         }
         titles.text = suggest.name
         textView.text = suggest.detail
-        
+        pickerView.selectRow(suggest.category, inComponent: 0, animated: true)
+
         
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerView.selectRow(2, inComponent: 0, animated: true)
 
+//        if let emoji = suggest {
+//            textView.text = emoji.detail
+//            titles.text = emoji.name
+//                        title = "Edit Emoji"
+//        } else {
+//            title = "Add Emoji"
+//        }
+        
+        updateSaveButtonState()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -58,22 +70,30 @@ class SugeestionFormVC: UITableViewController, UIPickerViewDelegate, UIPickerVie
             return
         }
         let picker = pickerView.selectedRow(inComponent: 0)
-        
-//        if (picker == 0)
-//        {
-            
-            suggest = Suggestion(name: title, detail:detail , upvotes: 0)
+       
+            suggest = Suggestion(name: title, detail:detail , upvotes: 0, category: pickerView.selectedRow(inComponent: 0))
 
-//        }
-//        else{
-//            suggest = listOfSuggestions(title: values[1], suggestions: [Suggestion(name: "ss", description: "String", upvotes: 3)])
-
-//        }
             performSegue(withIdentifier: "transfer", sender: self)
         
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        pickerView.selectRow(suggest?.category ?? 0, inComponent: 0, animated: true)
+        // This will select the third row in the first component of the picker view
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func updateSaveButtonState() {
+        let title = titles.text ?? ""
+        let descriptionText =  textView.text ?? ""
+        saveButton.isEnabled =  !title.isEmpty 
+    }
+    
+    @IBAction func textEditingChanged(_ sender: UITextField) {
+        updateSaveButtonState()
     }
 
     let values = ["School Events", "Teachers", "Academics"]
@@ -88,7 +108,14 @@ class SugeestionFormVC: UITableViewController, UIPickerViewDelegate, UIPickerVie
     
         
         // MARK: - Table view data source
-        
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard segue.identifier == "transfer" else { return }
+//
+//        let title = titles.text ?? ""
+//        let details = textView.text ?? ""
+//
+//        suggest = Suggestion(name: title, detail: details, upvotes: suggest?.upvotes ?? 0, category: pickerView.selectedRow(inComponent: 0))
+   // }
         
     
 }
