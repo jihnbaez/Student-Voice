@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5B46253B29BD4E0600143396 /* STableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46253A29BD4E0600143396 /* STableCellView.swift */; };
+		7E3ECACA29CA2438004F93F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3ECAC929CA2438004F93F1 /* ViewController.swift */; };
 		7E405495298D8C8E003B5402 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E405494298D8C8E003B5402 /* File.swift */; };
 		7E405497298D9112003B5402 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E405496298D9112003B5402 /* TableViewController.swift */; };
 		7E44FE8329BBAA65004F3D3B /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E44FE8229BBAA65004F3D3B /* SuggestionViewController.swift */; };
 		7E462CD829B9093100EA56DF /* SugeestionFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E462CD729B9093100EA56DF /* SugeestionFormVC.swift */; };
+		7E94902629CB6DDB002039D7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94902529CB6DDB002039D7 /* ChatViewController.swift */; };
+		7E94902929CB6FC4002039D7 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E94902829CB6FC4002039D7 /* MessageKit */; };
 		7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */; };
 		FDB2AD5129674C8600AE8ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2AD5029674C8600AE8ED3 /* AppDelegate.swift */; };
 		FDB2AD5329674C8600AE8ED3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */; };
-		FDB2AD5529674C8600AE8ED3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2AD5429674C8600AE8ED3 /* ViewController.swift */; };
 		FDB2AD5829674C8600AE8ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2AD5629674C8600AE8ED3 /* Main.storyboard */; };
 		FDB2AD5A29674C8B00AE8ED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB2AD5929674C8B00AE8ED3 /* Assets.xcassets */; };
 		FDB2AD5D29674C8B00AE8ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2AD5B29674C8B00AE8ED3 /* LaunchScreen.storyboard */; };
@@ -23,15 +25,16 @@
 
 /* Begin PBXFileReference section */
 		5B46253A29BD4E0600143396 /* STableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STableCellView.swift; sourceTree = "<group>"; };
+		7E3ECAC929CA2438004F93F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E405494298D8C8E003B5402 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		7E405496298D9112003B5402 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7E44FE8229BBAA65004F3D3B /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		7E462CD729B9093100EA56DF /* SugeestionFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugeestionFormVC.swift; sourceTree = "<group>"; };
+		7E94902529CB6DDB002039D7 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditSuggestTableViewController.swift; sourceTree = "<group>"; };
 		FDB2AD4D29674C8600AE8ED3 /* Student Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Voice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB2AD5029674C8600AE8ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDB2AD5429674C8600AE8ED3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDB2AD5729674C8600AE8ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDB2AD5929674C8B00AE8ED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDB2AD5C29674C8B00AE8ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E94902929CB6FC4002039D7 /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +76,13 @@
 				FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */,
 				7E405494298D8C8E003B5402 /* File.swift */,
 				FDB2AD5629674C8600AE8ED3 /* Main.storyboard */,
+				7E3ECAC929CA2438004F93F1 /* ViewController.swift */,
+				7E94902529CB6DDB002039D7 /* ChatViewController.swift */,
 				7E462CD729B9093100EA56DF /* SugeestionFormVC.swift */,
 				7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */,
 				7E44FE8229BBAA65004F3D3B /* SuggestionViewController.swift */,
 				7E405496298D9112003B5402 /* TableViewController.swift */,
 				5B46253A29BD4E0600143396 /* STableCellView.swift */,
-				FDB2AD5429674C8600AE8ED3 /* ViewController.swift */,
 				FDB2AD5929674C8B00AE8ED3 /* Assets.xcassets */,
 				FDB2AD5B29674C8B00AE8ED3 /* LaunchScreen.storyboard */,
 				FDB2AD5E29674C8B00AE8ED3 /* Info.plist */,
@@ -101,6 +106,9 @@
 			dependencies = (
 			);
 			name = "Student Voice";
+			packageProductDependencies = (
+				7E94902829CB6FC4002039D7 /* MessageKit */,
+			);
 			productName = "Student Voice";
 			productReference = FDB2AD4D29674C8600AE8ED3 /* Student Voice.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +137,9 @@
 				Base,
 			);
 			mainGroup = FDB2AD4429674C8600AE8ED3;
+			packageReferences = (
+				7E94902729CB6FC4002039D7 /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
 			productRefGroup = FDB2AD4E29674C8600AE8ED3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,10 +171,11 @@
 				7E462CD829B9093100EA56DF /* SugeestionFormVC.swift in Sources */,
 				5B46253B29BD4E0600143396 /* STableCellView.swift in Sources */,
 				7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */,
-				FDB2AD5529674C8600AE8ED3 /* ViewController.swift in Sources */,
 				7E405495298D8C8E003B5402 /* File.swift in Sources */,
 				FDB2AD5129674C8600AE8ED3 /* AppDelegate.swift in Sources */,
+				7E94902629CB6DDB002039D7 /* ChatViewController.swift in Sources */,
 				7E405497298D9112003B5402 /* TableViewController.swift in Sources */,
+				7E3ECACA29CA2438004F93F1 /* ViewController.swift in Sources */,
 				FDB2AD5329674C8600AE8ED3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E94902729CB6FC4002039D7 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E94902829CB6FC4002039D7 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E94902729CB6FC4002039D7 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDB2AD4529674C8600AE8ED3 /* Project object */;
 }
