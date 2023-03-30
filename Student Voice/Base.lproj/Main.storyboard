@@ -450,6 +450,9 @@ Student Voice</string>
                                 <color key="tintColor" red="0.14813938739999999" green="0.2683282495" blue="0.35687452549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Record a video"/>
+                                <connections>
+                                    <segue destination="ORz-6c-T9S" kind="show" id="0vu-Sy-KkA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlg-88-5zB">
                                 <rect key="frame" x="58" y="565" width="119" height="35"/>
@@ -492,7 +495,7 @@ Student Voice</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t4A-X9-5dG">
-                                <rect key="frame" x="20" y="79" width="353" height="647"/>
+                                <rect key="frame" x="20" y="123" width="353" height="603"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V0b-gw-bxb"/>
@@ -506,6 +509,7 @@ Student Voice</string>
                             <constraint firstItem="t4A-X9-5dG" firstAttribute="leading" secondItem="V0b-gw-bxb" secondAttribute="leading" constant="20" id="z9n-Ol-wP9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="foy-eY-zgH"/>
                     <connections>
                         <outlet property="button" destination="Ofc-sG-RLf" id="dnR-S0-toV"/>
                         <outlet property="imageView" destination="t4A-X9-5dG" id="zOT-Le-HXa"/>

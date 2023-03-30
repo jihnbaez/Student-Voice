@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate{
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var button: UIButton!
@@ -24,6 +24,13 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func didTapButton() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+    
+    extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         
     }
 
