@@ -16,6 +16,7 @@
 		7E94902629CB6DDB002039D7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94902529CB6DDB002039D7 /* ChatViewController.swift */; };
 		7E94902929CB6FC4002039D7 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E94902829CB6FC4002039D7 /* MessageKit */; };
 		7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */; };
+		FDAAE02B29D5FA0C003D6DB0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAAE02A29D5FA0C003D6DB0 /* CameraViewController.swift */; };
 		FDB2AD5129674C8600AE8ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2AD5029674C8600AE8ED3 /* AppDelegate.swift */; };
 		FDB2AD5329674C8600AE8ED3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */; };
 		FDB2AD5829674C8600AE8ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2AD5629674C8600AE8ED3 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		7E462CD729B9093100EA56DF /* SugeestionFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugeestionFormVC.swift; sourceTree = "<group>"; };
 		7E94902529CB6DDB002039D7 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditSuggestTableViewController.swift; sourceTree = "<group>"; };
+		FDAAE02A29D5FA0C003D6DB0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FDB2AD4D29674C8600AE8ED3 /* Student Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Voice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB2AD5029674C8600AE8ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				7E405494298D8C8E003B5402 /* File.swift */,
 				FDB2AD5629674C8600AE8ED3 /* Main.storyboard */,
 				7E3ECAC929CA2438004F93F1 /* ViewController.swift */,
+				FDAAE02A29D5FA0C003D6DB0 /* CameraViewController.swift */,
 				7E94902529CB6DDB002039D7 /* ChatViewController.swift */,
 				7E462CD729B9093100EA56DF /* SugeestionFormVC.swift */,
 				7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */,
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDAAE02B29D5FA0C003D6DB0 /* CameraViewController.swift in Sources */,
 				7E44FE8329BBAA65004F3D3B /* SuggestionViewController.swift in Sources */,
 				7E462CD829B9093100EA56DF /* SugeestionFormVC.swift in Sources */,
 				5B46253B29BD4E0600143396 /* STableCellView.swift in Sources */,
