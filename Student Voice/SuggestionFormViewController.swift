@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SugeestionFormVC: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SuggestionFormViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var textView: UITextView!

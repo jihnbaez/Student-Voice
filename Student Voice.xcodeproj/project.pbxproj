@@ -11,7 +11,7 @@
 		7E3ECACA29CA2438004F93F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3ECAC929CA2438004F93F1 /* ViewController.swift */; };
 		7E405495298D8C8E003B5402 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E405494298D8C8E003B5402 /* File.swift */; };
 		7E405497298D9112003B5402 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E405496298D9112003B5402 /* TableViewController.swift */; };
-		7E462CD829B9093100EA56DF /* SugeestionFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E462CD729B9093100EA56DF /* SugeestionFormVC.swift */; };
+		7E462CD829B9093100EA56DF /* SuggestionFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E462CD729B9093100EA56DF /* SuggestionFormViewController.swift */; };
 		7E94902629CB6DDB002039D7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94902529CB6DDB002039D7 /* ChatViewController.swift */; };
 		7E94902929CB6FC4002039D7 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E94902829CB6FC4002039D7 /* MessageKit */; };
 		7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */; };
@@ -28,7 +28,7 @@
 		7E3ECAC929CA2438004F93F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E405494298D8C8E003B5402 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		7E405496298D9112003B5402 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		7E462CD729B9093100EA56DF /* SugeestionFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugeestionFormVC.swift; sourceTree = "<group>"; };
+		7E462CD729B9093100EA56DF /* SuggestionFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionFormViewController.swift; sourceTree = "<group>"; };
 		7E94902529CB6DDB002039D7 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditSuggestTableViewController.swift; sourceTree = "<group>"; };
 		FDB2AD4D29674C8600AE8ED3 /* Student Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Voice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +78,7 @@
 				FDB2AD5629674C8600AE8ED3 /* Main.storyboard */,
 				7E3ECAC929CA2438004F93F1 /* ViewController.swift */,
 				7E94902529CB6DDB002039D7 /* ChatViewController.swift */,
-				7E462CD729B9093100EA56DF /* SugeestionFormVC.swift */,
+				7E462CD729B9093100EA56DF /* SuggestionFormViewController.swift */,
 				7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */,
 				7E405496298D9112003B5402 /* TableViewController.swift */,
 				5B46253A29BD4E0600143396 /* STableCellView.swift */,
@@ -166,15 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BDEA95329CA3031001FAAA4 /* EmojiCollectionViewHeader.swift in Sources */,
-				5BDEA95029CA3031001FAAA4 /* Emoji.swift in Sources */,
-				7E462CD829B9093100EA56DF /* SugeestionFormVC.swift in Sources */,
+				7E462CD829B9093100EA56DF /* SuggestionFormViewController.swift in Sources */,
 				5B46253B29BD4E0600143396 /* STableCellView.swift in Sources */,
 				7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */,
-				FDB2AD5529674C8600AE8ED3 /* ViewController.swift in Sources */,
-				5B0E002229CCCCC300D129A1 /* customPopOver.swift in Sources */,
-				5BDEA95229CA3031001FAAA4 /* EmojiCollectionViewController.swift in Sources */,
-				5BDEA95129CA3031001FAAA4 /* EmojiCollectionViewCell.swift in Sources */,
 				7E405495298D8C8E003B5402 /* File.swift in Sources */,
 				FDB2AD5129674C8600AE8ED3 /* AppDelegate.swift in Sources */,
 				7E94902629CB6DDB002039D7 /* ChatViewController.swift in Sources */,

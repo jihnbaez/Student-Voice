@@ -33,7 +33,7 @@ class TableViewController: UITableViewController {
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
         
         tableView.reloadData()
-        guard let source = segue.source as? SugeestionFormVC,
+        guard let source = segue.source as? SuggestionFormViewController,
               let s = source.suggest
         else {return}
         
@@ -63,14 +63,14 @@ class TableViewController: UITableViewController {
         
     }
 
-    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> SugeestionFormVC? {
+    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> SuggestionFormViewController? {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
             // Editing Emoji
             let emojiToEdit = list[indexPath.section].suggestions[indexPath.row]
-            return SugeestionFormVC(coder: coder, list: emojiToEdit)
+            return SuggestionFormViewController(coder: coder, list: emojiToEdit)
         } else {
             // Adding Emoji
-            return SugeestionFormVC(coder: coder, list: nil)
+            return SuggestionFormViewController(coder: coder, list: nil)
         }
     }
     

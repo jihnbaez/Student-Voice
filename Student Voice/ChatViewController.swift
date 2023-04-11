@@ -52,8 +52,7 @@ loadFirstMessages()
         messages.append(Message(sender: currentUser, messageId: "5", sentDate: Date().addingTimeInterval(-46400), kind: .text("nice")))
         messages.append(Message(sender: otherUser, messageId: "6", sentDate: Date().addingTimeInterval(-26400), kind: .text("ok")))
 
-        print(messages.count)
-print(messages)
+  
         
     }
     
@@ -65,7 +64,6 @@ print(messages)
     
  
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        print(messages.count)
         return messages.count
 
     }

@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var myTable: UITableView!
     
-
+var list = ["John Smith", "Angela Jones", "Sarah Green"]
     override func viewDidLoad() {
         super.viewDidLoad()
         myTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -22,12 +22,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "John Smith"
+        cell.textLabel?.text = list[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell
     }
