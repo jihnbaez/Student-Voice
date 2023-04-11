@@ -10,10 +10,8 @@ import UIKit
 class TableViewController: UITableViewController {
     
     
-    var events:[Suggestion] = [Suggestion(name: "new food", detail: "We need more good food", upvotes:7)]
-    var teachers:[Suggestion] =  [Suggestion(name: "Extended Help", detail: "lengthen office hours", upvotes: 16)]
-    var academics:[Suggestion] = [Suggestion(name: "Tutoring", detail: "Allow students to professionally tutor (include hours)", upvotes: 21)]
-    var list:[listOfSuggestions]!
+    var suggestions:[Suggestion] = [Suggestion(name: "new food", detail: "We need more good food", upvotes:7, category: 0), Suggestion(name: "Extended Help", detail: "lengthen office hours", upvotes: 16, category: 1), Suggestion(name: "Tutoring", detail: "Allow students to professionally tutor (include hours)", upvotes: 21, category: 2)]
+    var list:[Sections] = []
     
   override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,85 +24,88 @@ class TableViewController: UITableViewController {
             list[indexPath.section].suggestions.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+        else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }   
     }
     
+    
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-        guard let source = segue.source as? SugeestionFormVC,
+        
+        tableView.reloadData()
+        guard let source = segue.source as? SuggestionFormViewController,
               let s = source.suggest
         else {return}
         
         let p = source.pickerView.selectedRow(inComponent: 0)
         print(p)
         
-        if(p == 0){
-            if let indexPath = tableView.indexPathForSelectedRow {
-                
-                list[0].suggestions.remove(at: indexPath.row)
-                list[0].suggestions.insert(s, at: indexPath.row)
-                tableView.deselectRow(at: indexPath, animated: true)
-                
-                
-            }
-            else{
-                list[0].suggestions.append(s)
-            }
-        }
         
-        if(p == 1){
             if let indexPath = tableView.indexPathForSelectedRow {
-                
-                list[1].suggestions.remove(at: indexPath.row)
-                list[1].suggestions.insert(s, at: indexPath.row)
+                list[p].suggestions.remove(at: indexPath.row)
+                list[p].suggestions[indexPath.row] = s
+
+                list[p].suggestions.insert(s, at: indexPath.row)
                 tableView.deselectRow(at: indexPath, animated: true)
-                
-                
+               
+                tableView.reloadRows(at: [indexPath], with: .none)
+
             }
             else{
-                list[1].suggestions.append(s)
+//                list[0].suggestions.append(s)
+               let newIndexPath = IndexPath(row: list[p].suggestions.count, section: 0)
+                list[p].suggestions.append(s)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+               
+
             }
-        }
-        if(p == 2){
-            if let indexPath = tableView.indexPathForSelectedRow {
-                
-                list[2].suggestions.remove(at: indexPath.row)
-                list[2].suggestions.insert(s, at: indexPath.row)
-                tableView.deselectRow(at: indexPath, animated: true)
-                
-                
-            }
-            else{
-                list[2].suggestions.append(s)
-            }
-        }
+        tableView.reloadData()
+        
     }
 
-    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> SuggestionViewController? {
-        
-        guard let cell = sender as? UITableViewCell,
-                let indexPath = tableView.indexPath(for: cell) else {
-            return nil
+    @IBSegueAction func editBook(_ coder: NSCoder, sender: Any?) -> SuggestionFormViewController? {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            // Editing Emoji
+            let emojiToEdit = list[indexPath.section].suggestions[indexPath.row]
+            return SuggestionFormViewController(coder: coder, list: emojiToEdit)
+        } else {
+            // Adding Emoji
+            return SuggestionFormViewController(coder: coder, list: nil)
         }
-        
-        let book = list[indexPath.section].suggestions[indexPath.row]
-        
-        return SuggestionViewController(coder: coder, list: book)
     }
-                              
+    
+//
+//        guard let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) else {
+//            return nil
+//        }
+//
+//        let book = list[indexPath.section].suggestions[indexPath.row]
+//
+//        return SugeestionFormVC(coder: coder, list: book)
+//    }
+//
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        list = [listOfSuggestions(title: "School Events", suggestions: events),
-       listOfSuggestions(title: "Teachers", suggestions:teachers), listOfSuggestions(title: "Academics", suggestions:academics)]
+      
 
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       
     }
+    func updateSections() {
+        list.removeAll()
 
+        let grouped = Dictionary(grouping: suggestions, by: { $0.sectionTitle })
+        
+        for (title, emojis) in grouped.sorted(by: { $0.0 < $1.0 }) {
+            list.append(Sections(title: title, suggestions: emojis.sorted(by: { $0.name < $1.name })))
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -140,15 +141,34 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationItem.rightBarButtonItem?.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            tableView.deselectRow(at: indexPath, animated: true)
+            self.navigationItem.rightBarButtonItem?.isHidden = false
 
-    /*
-    // Override to support conditional editing of the table view.
+            
+        }
+        
+        
+        let sectionToMoveTo = list[indexPath.section].suggestions[indexPath.row].category
+        
+                let newRowIndexPath = IndexPath(row: 0, section: sectionToMoveTo)
+                
+        let itemToMove = list[indexPath.section].suggestions[indexPath.row]
+        list[indexPath.section].suggestions.remove(at: indexPath.row)
+        list[sectionToMoveTo].suggestions.insert(itemToMove, at: 0)
+                
+                tableView.moveRow(at: indexPath, to: newRowIndexPath)
+    }
+    
+    
+    
+  
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
-
+    
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -168,13 +188,12 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support conditional rearranging of the table view.
+    
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
+       
         return true
     }
-    */
+    
 
     /*
     // MARK: - Navigation
