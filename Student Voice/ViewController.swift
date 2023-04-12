@@ -14,9 +14,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 var list = ["John Smith", "Angela Jones", "Sarah Green"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        myTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        myTable.delegate = self
-        myTable.dataSource = self
+//        myTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        myTable.delegate = self
+//        myTable.dataSource = self
 
         // Do any additional setup after loading the view.
     }
