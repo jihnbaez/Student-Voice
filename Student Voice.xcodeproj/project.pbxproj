@@ -16,6 +16,8 @@
 		7E94902929CB6FC4002039D7 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E94902829CB6FC4002039D7 /* MessageKit */; };
 		7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */; };
 		FD5CBCB829E5E3CC009FF719 /* CameraViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBCB729E5E3CC009FF719 /* CameraViewController1.swift */; };
+		FD5CBCBD29E8740B009FF719 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FD5CBCBC29E8740B009FF719 /* FirebaseAuth */; };
+		FD5CBCBF29E8740B009FF719 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FD5CBCBE29E8740B009FF719 /* FirebaseDatabase */; };
 		FDB2AD5129674C8600AE8ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2AD5029674C8600AE8ED3 /* AppDelegate.swift */; };
 		FDB2AD5329674C8600AE8ED3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */; };
 		FDB2AD5829674C8600AE8ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2AD5629674C8600AE8ED3 /* Main.storyboard */; };
@@ -47,7 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5CBCBF29E8740B009FF719 /* FirebaseDatabase in Frameworks */,
 				7E94902929CB6FC4002039D7 /* MessageKit in Frameworks */,
+				FD5CBCBD29E8740B009FF719 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +114,8 @@
 			name = "Student Voice";
 			packageProductDependencies = (
 				7E94902829CB6FC4002039D7 /* MessageKit */,
+				FD5CBCBC29E8740B009FF719 /* FirebaseAuth */,
+				FD5CBCBE29E8740B009FF719 /* FirebaseDatabase */,
 			);
 			productName = "Student Voice";
 			productReference = FDB2AD4D29674C8600AE8ED3 /* Student Voice.app */;
@@ -141,6 +147,7 @@
 			mainGroup = FDB2AD4429674C8600AE8ED3;
 			packageReferences = (
 				7E94902729CB6FC4002039D7 /* XCRemoteSwiftPackageReference "MessageKit" */,
+				FD5CBCBB29E8740A009FF719 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = FDB2AD4E29674C8600AE8ED3 /* Products */;
 			projectDirPath = "";
@@ -406,6 +413,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		FD5CBCBB29E8740A009FF719 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -413,6 +428,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E94902729CB6FC4002039D7 /* XCRemoteSwiftPackageReference "MessageKit" */;
 			productName = MessageKit;
+		};
+		FD5CBCBC29E8740B009FF719 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD5CBCBB29E8740A009FF719 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FD5CBCBE29E8740B009FF719 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD5CBCBB29E8740A009FF719 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
