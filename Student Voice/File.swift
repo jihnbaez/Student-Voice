@@ -12,9 +12,9 @@ struct Suggestion: Equatable {
     var detail: String
     var upvotes: Int
     var category:Int
-    var sectionTitle: String {
-        String(name.uppercased().first ?? "?")
-    }
+//    var sectionTitle: String {
+//        String(name.uppercased().first ?? "?")
+//    }
     
     static func ==(lhs: Self, rhs: Self) -> Bool {
         return lhs.name == rhs.name
@@ -22,7 +22,7 @@ struct Suggestion: Equatable {
     
 }
 
-struct Sections {
+struct listOfSuggestions {
     var title: String
     var suggestions: [Suggestion]
 }
