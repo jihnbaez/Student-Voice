@@ -1,54 +1,67 @@
 //
-//  ChatViewController.swift
+//  ViewController.swift
 //  Student Voice
 //
-//  Created by 4d on 3/21/23.
+//  Created by 4d on 4/17/23.
 //
 
+import Foundation
 import UIKit
+import FirebaseAuth
+import Firebase
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController:UIViewController
+{
     
-    @IBOutlet var myTable: UITableView!
+    @IBOutlet weak var emailTField:UITextField!
+    @IBOutlet weak var psswrdTfield:UITextField!
+    @IBOutlet weak var enter:UIButton!
     
-var list = ["John Smith", "Angela Jones", "Sarah Green"]
     override func viewDidLoad() {
         super.viewDidLoad()
-//        myTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-//        myTable.delegate = self
-//        myTable.dataSource = self
-
-        // Do any additional setup after loading the view.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = list[indexPath.row]
-        cell.accessoryType = .disclosureIndicator
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    @objc private func didTap()
+    {
+        guard let email = emailTField.text, !email.isEmpty, let password = psswrdTfield.text, !password.isEmpty else {
+            print("Missing Field Data")
+            return
+        }
         
-        let vc = ChatViewController()
-        vc.title = "Chat"
-        navigationController?.pushViewController(vc, animated: true)
         
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] result, error in
+            guard let strongSelf = self else {
+                return
+            }
+            guard error == nil else {
+                strongSelf.showCreateAccount(email: email, password: password)
+                return
+            }
+            print("You have signed in")
+            strongSelf.emailTField.isHidden = true
+            strongSelf.psswrdTfield.isHidden = true
+            strongSelf.enter.isHidden = true
+        })
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showCreateAccount(email: String, password: String) {
+        let alert = UIAlertController(title: "Create Account", message: "Would you like to create an account?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: .default))
+        
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { [weak self] result, error in
+            guard let strongSelf = self else {
+                return
+            }
+            guard error == nil else {
+                print("Account Creation failed")
+                return
+            }
+            print("You have signed in")
+            strongSelf.emailTField.isHidden = true
+            strongSelf.psswrdTfield.isHidden = true
+            strongSelf.enter.isHidden = true
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
     }
-    */
-
 }
