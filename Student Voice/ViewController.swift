@@ -19,6 +19,7 @@ class ViewController:UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        enter.addTarget(self, action: #selector(didTap), for: .touchUpInside)
     }
     
     @objc private func didTap()
@@ -38,15 +39,16 @@ class ViewController:UIViewController
                 return
             }
             print("You have signed in")
-            strongSelf.emailTField.isHidden = true
-            strongSelf.psswrdTfield.isHidden = true
-            strongSelf.enter.isHidden = true
+          strongSelf.emailTField.isHidden = true
+          strongSelf.psswrdTfield.isHidden = true
+          strongSelf.enter.isHidden = true
         })
     }
     func showCreateAccount(email: String, password: String) {
         let alert = UIAlertController(title: "Create Account", message: "Would you like to create an account?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Continue", style: .default))
         
+        performSegue(withIdentifier: "home", sender: nil)
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { [weak self] result, error in
             guard let strongSelf = self else {
                 return
