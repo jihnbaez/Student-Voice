@@ -761,6 +761,36 @@ Student Voice</string>
             </objects>
             <point key="canvasLocation" x="5130.5343511450383" y="-1061.2676056338028"/>
         </scene>
+        <!--News Feed-->
+        <scene sceneID="CRz-r2-biJ">
+            <objects>
+                <viewController id="FOJ-Kx-qLo" customClass="newsFeed" customModule="Student_Voice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YbQ-de-VeU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xhZ-zX-DmS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ce8-ac-nRU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ce8-ac-nRU" firstAttribute="bottom" secondItem="xhZ-zX-DmS" secondAttribute="bottom" id="28F-jM-2dF"/>
+                            <constraint firstItem="xhZ-zX-DmS" firstAttribute="top" secondItem="Ce8-ac-nRU" secondAttribute="top" id="XCk-ms-s4X"/>
+                            <constraint firstItem="xhZ-zX-DmS" firstAttribute="leading" secondItem="Ce8-ac-nRU" secondAttribute="leading" id="awR-WJ-C1i"/>
+                            <constraint firstItem="Ce8-ac-nRU" firstAttribute="trailing" secondItem="xhZ-zX-DmS" secondAttribute="trailing" id="gWP-1d-VtF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="xhZ-zX-DmS" id="dvV-Dl-btN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nid-Hs-dSd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6274" y="-1074"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="brW-M3-rif">
             <objects>
