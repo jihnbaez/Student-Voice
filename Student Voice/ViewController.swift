@@ -39,6 +39,7 @@ class ViewController:UIViewController
                 return
             }
             print("You have signed in")
+
           strongSelf.emailTField.isHidden = true
           strongSelf.psswrdTfield.isHidden = true
           strongSelf.enter.isHidden = true
@@ -48,7 +49,6 @@ class ViewController:UIViewController
         let alert = UIAlertController(title: "Create Account", message: "Would you like to create an account?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Continue", style: .default))
         
-        performSegue(withIdentifier: "home", sender: nil)
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { [weak self] result, error in
             guard let strongSelf = self else {
                 return
@@ -58,10 +58,15 @@ class ViewController:UIViewController
                 return
             }
             print("You have signed in")
+            
+
             strongSelf.emailTField.isHidden = true
             strongSelf.psswrdTfield.isHidden = true
             strongSelf.enter.isHidden = true
+            
         })
+
+
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true)
