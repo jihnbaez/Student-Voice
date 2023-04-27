@@ -22,7 +22,7 @@ struct Suggestion: Equatable {
     
 }
 
-struct Sections {
+struct listOfSuggestions {
     var title: String
     var suggestions: [Suggestion]
 }
