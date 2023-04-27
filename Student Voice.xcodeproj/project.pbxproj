@@ -16,6 +16,7 @@
 		7E94902629CB6DDB002039D7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94902529CB6DDB002039D7 /* ChatViewController.swift */; };
 		7E94902929CB6FC4002039D7 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E94902829CB6FC4002039D7 /* MessageKit */; };
 		7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */; };
+		7EE00DFC29FAE93800412258 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE00DFB29FAE93800412258 /* LogIn.swift */; };
 		7EECC0C229ED98A8001D789E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECC0C129ED98A8001D789E /* ViewController.swift */; };
 		FD5CBCB829E5E3CC009FF719 /* CameraViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBCB729E5E3CC009FF719 /* CameraViewController1.swift */; };
 		FD5CBCBD29E8740B009FF719 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FD5CBCBC29E8740B009FF719 /* FirebaseAuth */; };
@@ -37,6 +38,7 @@
 		7E4ADA6329E9C28800373E0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E94902529CB6DDB002039D7 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditSuggestTableViewController.swift; sourceTree = "<group>"; };
+		7EE00DFB29FAE93800412258 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		7EECC0C129ED98A8001D789E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD5CBCB729E5E3CC009FF719 /* CameraViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController1.swift; sourceTree = "<group>"; };
 		FDB2AD4D29674C8600AE8ED3 /* Student Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Voice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 				FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */,
 				7E405494298D8C8E003B5402 /* File.swift */,
 				FDB2AD5629674C8600AE8ED3 /* Main.storyboard */,
+				7EE00DFB29FAE93800412258 /* LogIn.swift */,
 				7EECC0C129ED98A8001D789E /* ViewController.swift */,
 				7E3ECAC929CA2438004F93F1 /* ChatHomeViewController.swift */,
 				7E94902529CB6DDB002039D7 /* ChatViewController.swift */,
@@ -190,6 +193,7 @@
 				7EECC0C229ED98A8001D789E /* ViewController.swift in Sources */,
 				7E405495298D8C8E003B5402 /* File.swift in Sources */,
 				FDB2AD5129674C8600AE8ED3 /* AppDelegate.swift in Sources */,
+				7EE00DFC29FAE93800412258 /* LogIn.swift in Sources */,
 				7E94902629CB6DDB002039D7 /* ChatViewController.swift in Sources */,
 				7E405497298D9112003B5402 /* TableViewController.swift in Sources */,
 				7E3ECACA29CA2438004F93F1 /* ChatHomeViewController.swift in Sources */,
