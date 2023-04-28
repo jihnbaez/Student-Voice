@@ -1,19 +1,16 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    
-    
-    var events:[Suggestion] = [Suggestion(name: "new food", detail: "We need more good food", upvotes:7, category: 0)]
-    var teachers:[Suggestion] =  [Suggestion(name: "Extended Help", detail: "lengthen office hours", upvotes: 16, category: 1)]
-    var academics:[Suggestion] = [Suggestion(name: "Tutoring", detail: "Allow students to professionally tutor (include hours)", upvotes: 1, category: 2)]
+    var events:[Suggestion] = [Suggestion(name: "new food", detail: "We need more good food", upvotes:7, category: 0), Suggestion(name: "new food", detail: "We need more good food", upvotes:7, category: 0)]
+    var teachers:[Suggestion] =  [Suggestion(name: "Extended Help", detail: "lengthen office hours", upvotes: 16, category: 1), Suggestion(name: "Extended Help", detail: "lengthen office hours", upvotes: 16, category: 1)]
+    var academics:[Suggestion] = [Suggestion(name: "Tutoring", detail: "Allow students to professionally tutor (include hours)", upvotes: 1, category: 2), Suggestion(name: "Tutoring", detail: "Allow students to professionally tutor (include hours)", upvotes: 1, category: 2)]
     var list:[listOfSuggestions]!
     
   override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
- 
         tableView.reloadData()
     }
-    
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             list[indexPath.section].suggestions.remove(at: indexPath.row)
@@ -23,23 +20,22 @@ class TableViewController: UITableViewController {
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
         guard let source = segue.source as? SuggestionFormViewController,
-              let s = source.suggest
-        else {return}
+              let s = source.suggest else {return}
         
         let p = source.pickerView.selectedRow(inComponent: 0)
         print(p)
-        
         if(p == 0){
             if let indexPath = tableView.indexPathForSelectedRow {
                 
                 list[0].suggestions.remove(at: indexPath.row)
                 list[0].suggestions.insert(s, at: indexPath.row)
                 tableView.deselectRow(at: indexPath, animated: true)
-                
-                
+               tableView.reloadRows(at: [indexPath], with: .none)
             }
             else{
+                let newIndexPath = IndexPath(row: 0, section: 0)
                 list[0].suggestions.append(s)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }
         
@@ -49,12 +45,14 @@ class TableViewController: UITableViewController {
                 list[1].suggestions.remove(at: indexPath.row)
                 list[1].suggestions.insert(s, at: indexPath.row)
                 tableView.deselectRow(at: indexPath, animated: true)
-                
-                
+                tableView.reloadRows(at: [indexPath], with: .none)
             }
             else{
+                let newIndexPath = IndexPath(row: 0, section: 1)
                 list[1].suggestions.append(s)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            
         }
         if(p == 2){
             if let indexPath = tableView.indexPathForSelectedRow {
@@ -62,8 +60,7 @@ class TableViewController: UITableViewController {
                 list[2].suggestions.remove(at: indexPath.row)
                 list[2].suggestions.insert(s, at: indexPath.row)
                 tableView.deselectRow(at: indexPath, animated: true)
-                
-                
+                tableView.reloadRows(at: [indexPath], with: .none)
             }
             else{
                 list[2].suggestions.append(s)
@@ -77,20 +74,15 @@ class TableViewController: UITableViewController {
                 let indexPath = tableView.indexPath(for: cell) else {
             return nil
         }
-        
         let book = list[indexPath.section].suggestions[indexPath.row]
-        
         return SuggestionFormViewController(coder: coder, list: book)
     }
                               
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         list = [listOfSuggestions(title: "School Events", suggestions: events),
        listOfSuggestions(title: "Teachers", suggestions:teachers), listOfSuggestions(title: "Academics", suggestions:academics)]
-
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = false
 
