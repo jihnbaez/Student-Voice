@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="99R-hJ-rah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pRB-FW-M7T">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -722,10 +722,11 @@ Student Voice</string>
                         <viewLayoutGuide key="safeArea" id="sjB-9o-dS3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="y0e-Dp-3lb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03S-aI-snD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3927" y="-868"/>
+            <point key="canvasLocation" x="4852.6717557251905" y="-868.30985915492965"/>
         </scene>
         <!--Camera View Controller1-->
         <scene sceneID="v0v-6c-Msm">
@@ -742,15 +743,19 @@ Student Voice</string>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpZ-MW-dgo">
                                 <rect key="frame" x="16" y="673" width="361" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="didTap:" destination="99R-hJ-rah" eventType="touchUpInside" id="V93-dZ-25o"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rx9-4l-EOa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
                     </view>
                     <connections>
                         <outlet property="button1" destination="qpZ-MW-dgo" id="BgS-6b-g51"/>
@@ -759,7 +764,7 @@ Student Voice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nV-gW-XJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5130.5343511450383" y="-1061.2676056338028"/>
+            <point key="canvasLocation" x="6057.2519083969464" y="-1061.2676056338028"/>
         </scene>
         <!--News Feed-->
         <scene sceneID="CRz-r2-biJ">
@@ -789,7 +794,7 @@ Student Voice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nid-Hs-dSd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6274" y="-1074"/>
+            <point key="canvasLocation" x="7199.2366412213742" y="-1074.6478873239437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="brW-M3-rif">
@@ -1051,7 +1056,7 @@ Student Voice</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-Se-EPc">
-                                                    <rect key="frame" x="35.000000000000057" y="15" width="208.66666666666666" height="30"/>
+                                                    <rect key="frame" x="35.000000000000043" y="15" width="208.66666666666666" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dff-9D-86h" userLabel="Click to pick:">
                                                             <rect key="frame" x="0.0" y="0.0" width="37.666666666666664" height="30"/>
@@ -1160,6 +1165,24 @@ Student Voice</string>
             </objects>
             <point key="canvasLocation" x="5663.3587786259541" y="896.47887323943667"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dg2-Gj-QZW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o7M-Qz-JK0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="NcR-1b-0qX">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pRB-FW-M7T" kind="relationship" relationship="rootViewController" id="bdy-a6-T9J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Exb-RQ-cW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3925.9541984732823" y="-868.30985915492965"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="sWI-La-viH"/>
@@ -1180,6 +1203,12 @@ Student Voice</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
