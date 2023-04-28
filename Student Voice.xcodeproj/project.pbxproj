@@ -18,6 +18,9 @@
 		7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */; };
 		7EE00DFC29FAE93800412258 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE00DFB29FAE93800412258 /* LogIn.swift */; };
 		7EECC0C229ED98A8001D789E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECC0C129ED98A8001D789E /* ViewController.swift */; };
+		BB316C0129FC43B900F059FE /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB316C0029FC43B900F059FE /* StorageManager.swift */; };
+		BB316C0429FC461D00F059FE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BB316C0329FC461D00F059FE /* FirebaseStorage */; };
+		BB316C0629FC467C00F059FE /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = BB316C0529FC467C00F059FE /* FirebaseAppCheck */; };
 		BBB44EC629FC417D00C8FB18 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44EBC29FC417D00C8FB18 /* EditProfileViewController.swift */; };
 		BBB44EC729FC417D00C8FB18 /* publishpostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44EBD29FC417D00C8FB18 /* publishpostViewController.swift */; };
 		BBB44EC829FC417D00C8FB18 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44EBE29FC417D00C8FB18 /* PostViewController.swift */; };
@@ -53,6 +56,7 @@
 		7EB27D5729B6560F003892D7 /* AddEditSuggestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditSuggestTableViewController.swift; sourceTree = "<group>"; };
 		7EE00DFB29FAE93800412258 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		7EECC0C129ED98A8001D789E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB316C0029FC43B900F059FE /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		BBB44EBC29FC417D00C8FB18 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		BBB44EBD29FC417D00C8FB18 /* publishpostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = publishpostViewController.swift; sourceTree = "<group>"; };
 		BBB44EBE29FC417D00C8FB18 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +86,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD5CBCBF29E8740B009FF719 /* FirebaseDatabase in Frameworks */,
+				BB316C0429FC461D00F059FE /* FirebaseStorage in Frameworks */,
 				7E94902929CB6FC4002039D7 /* MessageKit in Frameworks */,
+				BB316C0629FC467C00F059FE /* FirebaseAppCheck in Frameworks */,
 				FD5CBCBD29E8740B009FF719 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +96,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB316C0229FC461D00F059FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BBB44EBA29FC417D00C8FB18 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +165,7 @@
 		BBB44EDA29FC426500C8FB18 /* rresources */ = {
 			isa = PBXGroup;
 			children = (
+				BB316C0029FC43B900F059FE /* StorageManager.swift */,
 			);
 			path = rresources;
 			sourceTree = "<group>";
@@ -162,6 +176,7 @@
 				5B0E002129CCCCC300D129A1 /* customPopOver.swift */,
 				FDB2AD4F29674C8600AE8ED3 /* Student Voice */,
 				FDB2AD4E29674C8600AE8ED3 /* Products */,
+				BB316C0229FC461D00F059FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +235,8 @@
 				7E94902829CB6FC4002039D7 /* MessageKit */,
 				FD5CBCBC29E8740B009FF719 /* FirebaseAuth */,
 				FD5CBCBE29E8740B009FF719 /* FirebaseDatabase */,
+				BB316C0329FC461D00F059FE /* FirebaseStorage */,
+				BB316C0529FC467C00F059FE /* FirebaseAppCheck */,
 			);
 			productName = "Student Voice";
 			productReference = FDB2AD4D29674C8600AE8ED3 /* Student Voice.app */;
@@ -289,6 +306,7 @@
 				7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */,
 				BBB44ECB29FC417D00C8FB18 /* HomeViewController.swift in Sources */,
 				BBB44EC929FC417D00C8FB18 /* PostEditorViewController.swift in Sources */,
+				BB316C0129FC43B900F059FE /* StorageManager.swift in Sources */,
 				7EECC0C229ED98A8001D789E /* ViewController.swift in Sources */,
 				BBB44ECA29FC417D00C8FB18 /* ExploreViewController.swift in Sources */,
 				BBB44EC729FC417D00C8FB18 /* publishpostViewController.swift in Sources */,
@@ -548,6 +566,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E94902729CB6FC4002039D7 /* XCRemoteSwiftPackageReference "MessageKit" */;
 			productName = MessageKit;
+		};
+		BB316C0329FC461D00F059FE /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD5CBCBB29E8740A009FF719 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		BB316C0529FC467C00F059FE /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD5CBCBB29E8740A009FF719 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
 		};
 		FD5CBCBC29E8740B009FF719 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
