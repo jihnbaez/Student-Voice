@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B46253B29BD4E0600143396 /* STableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B46253A29BD4E0600143396 /* STableCellView.swift */; };
+		7E2786512A017C3C00754955 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2786502A017C3C00754955 /* Home.swift */; };
 		7E3ECACA29CA2438004F93F1 /* ChatHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3ECAC929CA2438004F93F1 /* ChatHomeViewController.swift */; };
 		7E405495298D8C8E003B5402 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E405494298D8C8E003B5402 /* File.swift */; };
 		7E405497298D9112003B5402 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E405496298D9112003B5402 /* TableViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		5B0E002129CCCCC300D129A1 /* customPopOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPopOver.swift; sourceTree = "<group>"; };
 		5B46253A29BD4E0600143396 /* STableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STableCellView.swift; sourceTree = "<group>"; };
+		7E2786502A017C3C00754955 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		7E3ECAC929CA2438004F93F1 /* ChatHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHomeViewController.swift; sourceTree = "<group>"; };
 		7E405494298D8C8E003B5402 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		7E405496298D9112003B5402 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */,
 				7E405494298D8C8E003B5402 /* File.swift */,
 				FDB2AD5629674C8600AE8ED3 /* Main.storyboard */,
+				7E2786502A017C3C00754955 /* Home.swift */,
 				7EE00DFB29FAE93800412258 /* LogIn.swift */,
 				7EECC0C129ED98A8001D789E /* ViewController.swift */,
 				7E3ECAC929CA2438004F93F1 /* ChatHomeViewController.swift */,
@@ -192,6 +195,7 @@
 				7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */,
 				7EECC0C229ED98A8001D789E /* ViewController.swift in Sources */,
 				7E405495298D8C8E003B5402 /* File.swift in Sources */,
+				7E2786512A017C3C00754955 /* Home.swift in Sources */,
 				FDB2AD5129674C8600AE8ED3 /* AppDelegate.swift in Sources */,
 				7EE00DFC29FAE93800412258 /* LogIn.swift in Sources */,
 				7E94902629CB6DDB002039D7 /* ChatViewController.swift in Sources */,

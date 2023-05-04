@@ -390,7 +390,7 @@
         <!--Item-->
         <scene sceneID="kct-tn-f2n">
             <objects>
-                <viewController id="b3L-lV-bT1" sceneMemberID="viewController">
+                <viewController id="b3L-lV-bT1" customClass="Home" customModule="Student_Voice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dKc-rh-mMw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -447,12 +447,23 @@ Student Voice</string>
                                     <segue destination="uJ3-p8-dJ4" kind="show" id="5ar-zM-sJ4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9o-vE-rXg">
+                                <rect key="frame" x="170" y="530" width="90" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14813938739999999" green="0.2683282495" blue="0.35687452549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Out"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JN7-Ri-Os8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="KKj-pC-mTW"/>
                     <navigationItem key="navigationItem" id="6Cu-ma-SKY"/>
+                    <connections>
+                        <outlet property="signOut" destination="J9o-vE-rXg" id="a2U-hS-UlJ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="signout" id="JdB-n3-HKn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oWd-3u-8mH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1008,7 +1019,7 @@ Student Voice</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-Se-EPc">
-                                                    <rect key="frame" x="35.000000000000057" y="15" width="208.66666666666666" height="30"/>
+                                                    <rect key="frame" x="35.000000000000043" y="15" width="208.66666666666666" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dff-9D-86h" userLabel="Click to pick:">
                                                             <rect key="frame" x="0.0" y="0.0" width="37.666666666666664" height="30"/>
@@ -1119,10 +1130,9 @@ Student Voice</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NzQ-qU-CJi"/>
         <segue reference="sWI-La-viH"/>
         <segue reference="vGb-Yp-aRD"/>
-        <segue reference="VUl-tb-LQV"/>
+        <segue reference="JdB-n3-HKn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="78d7e3a71e726451fde7c6fcf76b9671" width="554" height="1200"/>
