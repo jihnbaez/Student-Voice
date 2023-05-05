@@ -21,6 +21,7 @@
 		BB316C0129FC43B900F059FE /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB316C0029FC43B900F059FE /* StorageManager.swift */; };
 		BB316C0429FC461D00F059FE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BB316C0329FC461D00F059FE /* FirebaseStorage */; };
 		BB316C0629FC467C00F059FE /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = BB316C0529FC467C00F059FE /* FirebaseAppCheck */; };
+		BB316C082A0428B800F059FE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB316C072A0428B800F059FE /* SettingsViewController.swift */; };
 		BBB44EC629FC417D00C8FB18 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44EBC29FC417D00C8FB18 /* EditProfileViewController.swift */; };
 		BBB44EC729FC417D00C8FB18 /* publishpostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44EBD29FC417D00C8FB18 /* publishpostViewController.swift */; };
 		BBB44EC829FC417D00C8FB18 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB44EBE29FC417D00C8FB18 /* PostViewController.swift */; };
@@ -57,6 +58,7 @@
 		7EE00DFB29FAE93800412258 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		7EECC0C129ED98A8001D789E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB316C0029FC43B900F059FE /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		BB316C072A0428B800F059FE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BBB44EBC29FC417D00C8FB18 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		BBB44EBD29FC417D00C8FB18 /* publishpostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = publishpostViewController.swift; sourceTree = "<group>"; };
 		BBB44EBE29FC417D00C8FB18 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				BBB44EBD29FC417D00C8FB18 /* publishpostViewController.swift */,
 				BBB44EBE29FC417D00C8FB18 /* PostViewController.swift */,
 				BBB44EBF29FC417D00C8FB18 /* PostEditorViewController.swift */,
+				BB316C072A0428B800F059FE /* SettingsViewController.swift */,
 			);
 			path = other;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				BBB44ED629FC419100C8FB18 /* FeedPostGeneralTableViewCell.swift in Sources */,
 				BBB44ED829FC419100C8FB18 /* FeedPostHeaderTableViewCell.swift in Sources */,
 				FDB2AD5329674C8600AE8ED3 /* SceneDelegate.swift in Sources */,
+				BB316C082A0428B800F059FE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
