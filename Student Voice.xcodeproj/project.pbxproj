@@ -21,6 +21,9 @@
 		FD5CBCB829E5E3CC009FF719 /* CameraViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBCB729E5E3CC009FF719 /* CameraViewController1.swift */; };
 		FD5CBCBD29E8740B009FF719 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FD5CBCBC29E8740B009FF719 /* FirebaseAuth */; };
 		FD5CBCBF29E8740B009FF719 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FD5CBCBE29E8740B009FF719 /* FirebaseDatabase */; };
+		FD5CBCC929FC389B009FF719 /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBCC829FC389B009FF719 /* NewsFeed.swift */; };
+		FD5CBCCB29FC38F8009FF719 /* NewsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBCCA29FC38F8009FF719 /* NewsTableViewCellViewModel.swift */; };
+		FD5CBCCD29FC3923009FF719 /* APIcaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CBCCC29FC3923009FF719 /* APIcaller.swift */; };
 		FDB2AD5129674C8600AE8ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2AD5029674C8600AE8ED3 /* AppDelegate.swift */; };
 		FDB2AD5329674C8600AE8ED3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */; };
 		FDB2AD5829674C8600AE8ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB2AD5629674C8600AE8ED3 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 		7EE00DFB29FAE93800412258 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		7EECC0C129ED98A8001D789E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD5CBCB729E5E3CC009FF719 /* CameraViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController1.swift; sourceTree = "<group>"; };
+		FD5CBCC829FC389B009FF719 /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
+		FD5CBCCA29FC38F8009FF719 /* NewsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		FD5CBCCC29FC3923009FF719 /* APIcaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIcaller.swift; sourceTree = "<group>"; };
 		FDB2AD4D29674C8600AE8ED3 /* Student Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Student Voice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB2AD5029674C8600AE8ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				FDB2AD5229674C8600AE8ED3 /* SceneDelegate.swift */,
 				7E405494298D8C8E003B5402 /* File.swift */,
 				FDB2AD5629674C8600AE8ED3 /* Main.storyboard */,
+				FD5CBCC829FC389B009FF719 /* NewsFeed.swift */,
+				FD5CBCCA29FC38F8009FF719 /* NewsTableViewCellViewModel.swift */,
+				FD5CBCCC29FC3923009FF719 /* APIcaller.swift */,
 				7EE00DFB29FAE93800412258 /* LogIn.swift */,
 				7EECC0C129ED98A8001D789E /* ViewController.swift */,
 				7E3ECAC929CA2438004F93F1 /* ChatHomeViewController.swift */,
@@ -186,9 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD5CBCC929FC389B009FF719 /* NewsFeed.swift in Sources */,
+				FD5CBCCD29FC3923009FF719 /* APIcaller.swift in Sources */,
 				7E462CD829B9093100EA56DF /* SuggestionFormViewController.swift in Sources */,
 				FD5CBCB829E5E3CC009FF719 /* CameraViewController1.swift in Sources */,
 				5B46253B29BD4E0600143396 /* STableCellView.swift in Sources */,
+				FD5CBCCB29FC38F8009FF719 /* NewsTableViewCellViewModel.swift in Sources */,
 				7EB27D5829B6560F003892D7 /* AddEditSuggestTableViewController.swift in Sources */,
 				7EECC0C229ED98A8001D789E /* ViewController.swift in Sources */,
 				7E405495298D8C8E003B5402 /* File.swift in Sources */,
