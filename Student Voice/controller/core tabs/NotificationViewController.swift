@@ -7,14 +7,28 @@
 
 import UIKit
 
-class NotificationViewController: UIViewController {
+class NotificationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
+
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        return tableView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = "Notifications"
+        view.backgroundColor = .systemBackground
+        view.addSubview(tableView)
     }
     
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
 
 }
