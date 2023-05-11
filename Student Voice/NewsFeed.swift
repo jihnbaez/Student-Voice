@@ -7,7 +7,6 @@
 import UIKit
 
 class NewsFeed: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var table: UITableView!
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -49,7 +48,8 @@ class NewsFeed: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return viewModels.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as? NewsTableViewCell else{
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as? NewsTableViewCell
+        else{
             fatalError()
         }
         cell.configure(with: viewModels[indexPath.row])

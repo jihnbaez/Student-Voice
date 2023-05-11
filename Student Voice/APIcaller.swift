@@ -11,7 +11,8 @@ final class APIcaller{
     static let shared = APIcaller()
     
     struct Constants {
-        static let topHeadlinesURL = URL(string: "https://newsapi.org/v2/top-headlines?country=US&apiKey=")
+        static let topHeadlinesURL = URL(string:  "https://newsapi.org/v2/everything?q=bitcoin&apiKey=b300d636aa8b4ba895ec11d18d842458"
+)
     }
     private init() {}
     

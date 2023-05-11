@@ -14,7 +14,7 @@ class NewsTableViewCellViewModel {
     var imageData: Data? = nil
     
     init(
-        title: String,
+            title: String,
         subtitle: String,
         imageURL: URL?){
             self.title = title
@@ -27,11 +27,13 @@ class NewsTableViewCell: UITableViewCell {
     
     private let newsTitleLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         label.font = .systemFont(ofSize: 25, weight: .medium)
         return label
     }()
     private let subtitleLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         label.font = .systemFont(ofSize: 18, weight: .regular)
         return label
     }()
@@ -58,6 +60,15 @@ class NewsTableViewCell: UITableViewCell {
                                       y: 0,
                                       width: contentView.frame.size.width - 120,
                                       height: contentView.frame.size.height/2)
+        
+        subtitleLabel.frame = CGRect(x: 10,
+                                      y: 70,
+                                      width: contentView.frame.size.width - 170,
+                                      height: contentView.frame.size.height/2)
+        newsImageView.frame = CGRect(x: contentView.frame.size.width - 170,
+                                      y: 5,
+                                      width: 160,
+                                      height: contentView.frame.size.height - 10)
     }
     override func prepareForReuse() {
         super.prepareForReuse()
