@@ -4,7 +4,7 @@
 //
 //  Created by 6f on 5/4/23.
 //
-
+import SafariServices
 import UIKit
 
 struct SettingCellModel {
@@ -44,13 +44,13 @@ final class SettingsViewController: UIViewController {
     private func configureModels() {
         data.append([
             SettingCellModel(title: "Edit Profile") { [weak self] in
-
+                self?.didTapEditProfile()
             },
             SettingCellModel(title: "Invite Friends") { [weak self] in
-
+                self?.didTapInviteFriends()
             },
             SettingCellModel(title: "Save Origianl Posts") { [weak self] in
-
+                self?.didTapSaveOriginalPosts()
             }
        ])
         
@@ -58,13 +58,13 @@ final class SettingsViewController: UIViewController {
         
         data.append([
             SettingCellModel(title: "Terms of Service") { [weak self] in
-
+                self?.openURL(type: .terms)
             },
             SettingCellModel(title: "Privacy Policy") { [weak self] in
-
+                self?.openURL(type: .privacy)
             },
             SettingCellModel(title: "Help / Feedback") { [weak self] in
-
+                self?.openURL(type: .help)
             }
         ])
         
@@ -73,6 +73,36 @@ final class SettingsViewController: UIViewController {
                 self?.didTapLogOut()
             }
        ])
+    }
+    
+    enum SettingsURLType {
+        case terms, privacy, help
+    }
+    
+    private func openURL(type: SettingsURLType) {
+        let urlString: String
+        switch type {
+        case .terms:urlString = ""
+        case .privacy: urlString = ""
+        case .help: urlString = ""
+        }
+        
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+    }
+    
+    private func didTapSaveOriginalPosts() {
+        
+    }
+    
+    private func didTapInviteFriends() {
+        
+    }
+    
+    private func didTapEditProfile() {
+        
     }
     
     private func didTapLogOut() {
