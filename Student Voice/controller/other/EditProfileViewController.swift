@@ -8,10 +8,11 @@
 import UIKit
 
 class EditProfileViewController: UIViewController, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         <#code#>
     }
     
+   
     
     private let tableView: UITableView = {
         let tableView = UITableView()
