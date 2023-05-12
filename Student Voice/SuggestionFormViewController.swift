@@ -108,14 +108,14 @@ class SuggestionFormViewController: UITableViewController, UIPickerViewDelegate,
     
         
         // MARK: - Table view data source
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard segue.identifier == "transfer" else { return }
-//
-//        let title = titles.text ?? ""
-//        let details = textView.text ?? ""
-//
-//        suggest = Suggestion(name: title, detail: details, upvotes: suggest?.upvotes ?? 0, category: pickerView.selectedRow(inComponent: 0))
-   // }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "transfer" else { return }
+
+        let title = titles.text ?? ""
+        let details = textView.text ?? ""
+
+        suggest = Suggestion(name: title, detail: details, upvotes: suggest?.upvotes ?? 0, category: pickerView.selectedRow(inComponent: 0))
+    }
         
     
 }
