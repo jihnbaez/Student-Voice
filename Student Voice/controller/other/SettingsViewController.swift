@@ -82,14 +82,17 @@ final class SettingsViewController: UIViewController {
     private func openURL(type: SettingsURLType) {
         let urlString: String
         switch type {
-        case .terms:urlString = ""
-        case .privacy: urlString = ""
-        case .help: urlString = ""
+        case .terms:urlString = "https://help.instagram.com/581066165581870"
+        case .privacy: urlString = "https://help.instagram.com/155833707900388"
+        case .help: urlString = "https://help.instagram.com"
         }
         
         guard let url = URL(string: urlString) else {
             return
         }
+        
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
         
     }
     
@@ -98,11 +101,14 @@ final class SettingsViewController: UIViewController {
     }
     
     private func didTapInviteFriends() {
-        
+        // Show share sheet to invite friends
     }
     
     private func didTapEditProfile() {
-        
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
     }
     
     private func didTapLogOut() {
