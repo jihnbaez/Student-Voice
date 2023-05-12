@@ -150,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				BBB44ED129FC419100C8FB18 /* home feed */,
-				BBB44ED529FC419100C8FB18 /* FeedPostableViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -160,6 +159,7 @@
 			children = (
 				BBB44ED229FC419100C8FB18 /* FeedPostGeneralTableViewCell.swift */,
 				BBB44ED329FC419100C8FB18 /* FeedPostActionsTableViewCell.swift */,
+				BBB44ED529FC419100C8FB18 /* FeedPostableViewCell.swift */,
 				BBB44ED429FC419100C8FB18 /* FeedPostHeaderTableViewCell.swift */,
 			);
 			path = "home feed";

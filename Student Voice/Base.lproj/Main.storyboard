@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Fj-tQ-nzf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N4R-jk-J6G">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -587,6 +587,37 @@ Student Voice</string>
             </objects>
             <point key="canvasLocation" x="2573" y="-360"/>
         </scene>
+        <!--Notifications View Controller-->
+        <scene sceneID="KhY-js-xoq">
+            <objects>
+                <viewController id="kgG-Am-aw5" customClass="NotificationsViewController" customModule="Student_Voice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qTG-DP-25R">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KRo-Sd-7wQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eFL-q8-GdZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tmm-Ri-p0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6698.4732824427474" y="-13.380281690140846"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="sJY-5c-PO3">
+            <objects>
+                <viewController id="N4R-jk-J6G" customClass="SettingsViewController" customModule="Student_Voice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3wA-2J-vfV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="f4g-B6-FiK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fv-jx-y2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6358" y="-739"/>
+        </scene>
         <!--Back-->
         <scene sceneID="JKr-wG-MJq">
             <objects>
@@ -691,7 +722,7 @@ Student Voice</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBR-ZR-NRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5663.3587786259541" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="7516.7938931297704" y="3.5211267605633805"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ElB-lv-Vqo">
@@ -1008,7 +1039,7 @@ Student Voice</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-Se-EPc">
-                                                    <rect key="frame" x="35.000000000000057" y="15" width="208.66666666666666" height="30"/>
+                                                    <rect key="frame" x="35.000000000000043" y="15" width="208.66666666666666" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dff-9D-86h" userLabel="Click to pick:">
                                                             <rect key="frame" x="0.0" y="0.0" width="37.666666666666664" height="30"/>
@@ -1117,9 +1148,45 @@ Student Voice</string>
             </objects>
             <point key="canvasLocation" x="5663.3587786259541" y="896.47887323943667"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O9B-wO-tr2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gXb-0p-Qsy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r8e-KL-7uq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4ZA-Vu-gej" kind="relationship" relationship="rootViewController" id="rXC-YN-w88"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAl-Dt-MdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4846.5648854961828" y="-13.380281690140846"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CnR-KR-iAw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ZA-Vu-gej" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VRw-eV-Cem"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VXc-7k-rmk">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kgG-Am-aw5" kind="relationship" relationship="rootViewController" id="4M5-J5-3Sv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dis-1n-AdT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5771.7557251908393" y="-13.380281690140846"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NzQ-qU-CJi"/>
         <segue reference="sWI-La-viH"/>
         <segue reference="vGb-Yp-aRD"/>
         <segue reference="VUl-tb-LQV"/>

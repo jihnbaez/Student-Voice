@@ -42,12 +42,37 @@ final class SettingsViewController: UIViewController {
     }
 
     private func configureModels() {
-        let section = [
+        data.append([
+            SettingCellModel(title: "Edit Profile") { [weak self] in
+
+            },
+            SettingCellModel(title: "Invite Friends") { [weak self] in
+
+            },
+            SettingCellModel(title: "Save Origianl Posts") { [weak self] in
+
+            }
+       ])
+        
+        
+        
+        data.append([
+            SettingCellModel(title: "Terms of Service") { [weak self] in
+
+            },
+            SettingCellModel(title: "Privacy Policy") { [weak self] in
+
+            },
+            SettingCellModel(title: "Help / Feedback") { [weak self] in
+
+            }
+        ])
+        
+        data.append([
             SettingCellModel(title: "Log Out") { [weak self] in
                 self?.didTapLogOut()
             }
-       ]
-        data.append(section)
+       ])
     }
     
     private func didTapLogOut() {
@@ -68,6 +93,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.section][indexPath.row].title
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
